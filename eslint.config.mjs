@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import pluginReact from "eslint-plugin-react";
+import prettier from "eslint-config-prettier";
 
 import { defineConfig, globalIgnores } from "eslint/config";
 
@@ -25,6 +26,7 @@ export default defineConfig(
         "react/react-in-jsx-scope": "off",
       },
     },
+    prettier,
   ],
   [globalIgnores(["node_modules/", ".next/"])],
 );
